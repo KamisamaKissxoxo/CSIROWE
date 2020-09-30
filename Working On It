@@ -76,10 +76,9 @@ class Member():
     def getLocation(self):
         return self.location
 
-    preLocationOfMember = self.location[i]
     def moveInRandom(self, space=Space):
         for i in range(2):
-            # preLocationOfMember = self.location[i]
+            preLocationOfMember = self.location[i]
             self.location[i] = self.location[i] + random.uniform(-self.pace, self.pace)
             self.location[i] = min(self.location[i], space.max[i])
             self.location[i] = max(self.location[i], space.min[i])
